@@ -185,7 +185,7 @@ a.bbar_tab_sel {
  left: 30.5%;
  width: 590px;
  height: 531px;
- background-color: #ECE9D8;
+ background-color: #E5E5E5;
  border: 3px solid #4F53BC;
  border-radius: 9px;
  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
@@ -231,7 +231,7 @@ a.bbar_tab_sel {
  z-index: 1000;
  width: 509px;
  height: 430px;
- background-color: #ECE9D8;
+ background-color: #E5E5E5;
  border: 3px solid #4F53BC;
  border-radius: 9px;
  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
@@ -306,7 +306,7 @@ a.bbar_tab_sel {
  left: 30.5%;
  width: 450px;
  height: 540px;
- background-color: #ECE9D8;
+ background-color: #E5E5E5;
  border: 3px solid #4F53BC;
  border-radius: 9px;
  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
@@ -407,7 +407,7 @@ a.bbar_tab_sel {
  left: 34%;
  width: 370px;
  height: 325px;
- background-color: #ECE9D8;
+ background-color: #E5E5E5;
  border: 3px solid #4F53BC;
  border-radius: 9px;
  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
