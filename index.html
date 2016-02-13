@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>HTML Generator</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="index,follow">
+<!-- <link rel="stylesheet" type="text/css" href="webfonts/font-effects/font-effects.css"> -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.11.0/codemirror.min.css">
+<link rel="stylesheet" type="text/css" href="index.css">
+<!-- jQuery v1.12 (for legacy IE) https://jquery.com/ -->
+<!--[if lt IE 9]>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" defer></script>
+<![endif]-->
+<!-- jQuery v2.2.0 (for modern browsers) https://jquery.com/ -->
+<!--[if gte IE 9]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" defer></script>
+<!--<![endif]-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.11.0/codemirror.min.js" defer></script>
+<script type="text/javascript" src="html_langs.js" defer></script>
+<script type="text/javascript" src="html_regions.js" defer></script>
+<script type="text/javascript" src="index.js" defer></script>
+</head>
+<body><form action="http://codepen.io/pen/define" method="POST" target="_blank">
+
+<!-- frmOg -->
+<div id="frmOg">
+ <div id="frmOg_title">Facebook Open Graph Tag Editor</div>
+
+<div class="line" style="margin-top:16px;">
+ <label>&lt;meta property=&quot;og:type&quot; content=&quot;</label>
+ <a href="javascript:void(0)" id="lblOgType">website</a>
+ <label>&quot;&gt;</label>
+ <label style="float:right;margin-right:22px;text-align:right;">(<a href="https://developers.facebook.com/docs/sharing/webmasters" target="_blank">more info</a>)</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;og:url&quot; content=&quot;</label>
+ <input id="txtOgURL" style="width:240px;" type="text" value="">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;og:title&quot; content=&quot;</label>
+ <input id="txtOgTitle" style="width:224px;" type="text" value="">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;og:description&quot; content=&quot;</label>
+ <input id="txtOgDesc" style="width:176px;" type="text" value="">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;og:site_name&quot; content=&quot;</label>
+ <input id="txtOgSiteName" style="width:192px;" type="text" value="">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;og:image&quot; content=&quot;</label>
+ <input id="txtOgImage" style="width:224px;" type="text" value="">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;fb:app_id&quot; content=&quot;</label>
+ <input id="txtFbAppId" style="width:216px;" type="text" value="">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;fb:profile_id&quot; content=&quot;</label>
+ <input id="txtFbProfileId" style="width:184px;" type="text" value="">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;article:published_time&quot; content=&quot;</label>
+ <input id="txtArticlePublishedTime" style="width:112px;" type="text" value="" disabled>
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;article:modified_time&quot; content=&quot;</label>
+ <input id="txtArticleModifiedTime" style="width:120px;" type="text" value="" disabled>
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;article:author&quot; content=&quot;</label>
+ <input id="txtArticleAuthor" style="width:176px;" type="text" value="" disabled>
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;article:publisher&quot; content=&quot;</label>
+ <input id="txtArticlePublisher" style="width:152px;" type="text" value="" disabled>
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;article:section&quot; content=&quot;</label>
+ <input id="txtArticleSection" style="width:168px;" type="text" value="" disabled>
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta property=&quot;article:tag&quot; content=&quot;</label>
+ <input id="txtArticleTag" style="width:200px;" type="text" value="" disabled>
+ <label>&quot;&gt;</label>
+</div>
+
+ <input id="frmOg_btnOK" type="button" value="OK">
+</div>
+
+<!-- frmTwitter -->
+<div id="frmTwitter">
+ <div id="frmTwitter_title">Twitter Tag Editor</div>
+ <p id="frmTwitter_Label2">
+Twitter Cards are designed to give the reader a preview<br>
+of the content before clicking through to your website.
+ </p>
+ <p id="frmTwitter_p1">More info:</p>
+ <p id="frmTwitter_p2"><a href="https://dev.twitter.com/cards/types/summary" target="_blank">https://dev.twitter.com/cards/types/summary</a></p>
+
+<div class="line">
+ <label>&lt;meta name=&quot;twitter:card&quot; content=&quot;</label>
+ <a href="javascript:void(0)" id="lblTwitterSummary">summary</a>
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta name=&quot;twitter:site&quot; content=&quot;@</label>
+ <input id="txtTwitterSite" style="width:132px;" type="text" value="" placeholder="SiteName">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta name=&quot;twitter:creator&quot; content=&quot;@</label>
+ <input id="txtTwitterCreator" style="width:108px;" type="text" value="" placeholder="AuthorName">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta name=&quot;twitter:title&quot; content=&quot;</label>
+ <input id="txtTwitterTitle" style="width:132px;" type="text" value="" placeholder="70 chars">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta name=&quot;twitter:description&quot; content=&quot;</label>
+ <input id="txtTwitterDesc" style="width:84px;" type="text" value="" placeholder="200 chars">
+ <label>&quot;&gt;</label>
+</div>
+
+<div class="line">
+ <label>&lt;meta name=&quot;twitter:image&quot; content=&quot;</label>
+ <input id="txtTwitterImage" style="width:132px;" type="text" value="" placeholder="URL of image">
+ <label>&quot;&gt;</label>
+</div>
+
+ <input id="frmTwitter_btnOK" type="button" value="OK">
+</div>
+
+<!-- frmCSP -->
+<div id="frmCSP">
+ <div id="frmCSP_title">Content Security Policy Editor</div>
+ <label id="frmCSP_Label2">
+<a href="https://www.w3.org/TR/CSP2/" target="_blank">Content Security Policy</a> is a computer security<br>
+standard introduced to prevent cross-site scripting,<br>
+clickjacking and other code injection attacks.
+</label>
+ 
+ <label id="frmCSP_Label1">Directives:</label>
+ <div id="directives_div">
+  <select id="frmCSP_List1" size="11"></select>
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_base-uri">
+  <img src="check_on.gif" width="13" height="13" alt="" class="chkimg" id="chk_child-src">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_connect-src">
+  <img src="check_on.gif" width="13" height="13" alt="" class="chkimg" id="chk_default-src">
+  <img src="check_on.gif" width="13" height="13" alt="" class="chkimg" id="chk_font-src">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_form-action">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_img-src">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_media-src">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_object-src">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_plugin-types">
+  <img src="check_on.gif" width="13" height="13" alt="" class="chkimg" id="chk_script-src">
+  <img src="check_on.gif" width="13" height="13" alt="" class="chkimg" id="chk_style-src">
+ </div>
+
+ <label id="frmCSP_Label3">Allowed Values:</label>
+ <div id="allowed_values_div">
+  <select id="frmCSP_List2" size="11"></select>
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_wildcard">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_none">
+  <img src="check_on.gif" width="13" height="13" alt="" class="chkimg" id="chk_self">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_unsafe_inline">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_unsafe_eval">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_https">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_data">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_mediastream">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_blob">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_file">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_custom_uri_1">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_custom_uri_2">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_custom_uri_3">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_custom_uri_4">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_custom_uri_5">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_custom_uri_6">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_custom_uri_7">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_custom_uri_8">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_custom_uri_9">
+  <img src="check_off.gif" width="13" height="13" alt="" class="chkimg" id="chk_custom_uri_10">
+</div>
+ <input id="frmCSP_btnOK" type="button" value="OK">
+</div>
+
+<!-- frmHtmlLang -->
+<div id="frmHtmlLang">
+ <div id="frmHtmlLang_title">Language Selection</div>
+ <label id="lblCaption">Choose your preferred language:</label>
+ <select id="lstLangs" size="11"></select>
+ <input id="frmHtmlLang_btnOK" type="button" value="OK">
+ <input id="frmHtmlLang_btnCancel" type="button" value="Cancel">
+</div>
+
+<!-- Main Body -->
+<table style="width:100%;height:100%;">
+<tr>
+<td style="width:140px;height:100%;vertical-align:top;padding-top:40px;background-color:#424F5A;">
+
+<div id="bbar">
+<ul>
+ <li><a href="#head" id="tab_head" class="bbar_tab_sel"><span id="tab_head_icon" style="font-family:'FontAwesome';font-size:15px;color:#FBFBFB;padding-right:7px;">&#xf05a;</span> &lt;HEAD&gt;</a></li>
+ <li><a href="#body" id="tab_body" class="bbar_tab"><span id="tab_body_icon" style="font-family:'FontAwesome';font-size:15px;padding-right:7px;">&#xf1fb;</span> &lt;BODY&gt;</a></li>
+ <li><a href="#header" id="tab_header" class="bbar_tab"><span id="tab_header_icon" style="font-family:'FontAwesome';font-size:15px;padding-right:7px;">&#xf277;</span> &lt;HEADER&gt;</a></li>
+ <li><a href="#main" id="tab_main" class="bbar_tab"><span id="tab_main_icon" style="font-family:'FontAwesome';font-size:15px;padding-right:7px;">&#xf0f6;</span> &lt;MAIN&gt;</a></li>
+ <li><a href="#footer" id="tab_footer" class="bbar_tab"><span id="tab_footer_icon" style="font-family:'FontAwesome';font-size:15px;padding-right:7px;">&#xf25e;</span> &lt;FOOTER&gt;</a></li>
+ <li><a href="#html" id="tab_gen" class="bbar_tab"><span id="tab_gen_icon" style="font-family:'FontAwesome';font-size:15px;padding-right:7px;">&#xf0d0;</span> Get HTML</a></li>
+</ul>
+</div>
+
+</td>
+<td style="vertical-align:top;padding-top:20px;">
+
+<!-- frmMeta -->
+<div id="tab_head_form" class="frm" style="display:block;">
+
+<div style="margin-bottom:2px;">
+ <label id="lblLang">&lt;html lang=&quot;</label>
+ <input id="txtLang" style="width:46px;text-align:center;" type="text" value="en">
+ <label id="lblLang2">&quot;&gt;</label>&nbsp;
+ <a href="javascript:void(0)" id="lblLookuplang">Look up</a>
+ <input id="chkCrossSite" type="checkbox" style="margin-left:15px;">
+ <label id="lblCrossSite" for="chkCrossSite" style="">Content-Security-Policy</label>
+ <input id="chkDontCache" type="checkbox" style="margin-left:15px;">
+ <label id="lblDontCache" for="chkDontCache">Do not cache</label>
+ <input id="chkHTML5Shiv" type="checkbox" style="margin-left:15px;">
+ <label id="lblHTML5Shiv" for="chkHTML5Shiv">HTML5 Shiv</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblTitle">&lt;title&gt;</label>
+ <input id="txtTitle" style="width:648px;" type="text" value="PUT TITLE HERE">
+ <label id="lblTitle2">&lt;/title&gt;</label>
+</div>
+
+<!-- 
+<div style="margin-bottom:2px;">
+ <label id="lblMetaKeywords">&lt;meta name=&quot;keywords&quot; content=&quot;</label>
+ <input id="txtMetaKeywords" style="width:456px;" type="text" value="">
+ <label id="lblMetaKeywords2">&quot;&gt;</label>
+</div>
+-->
+
+<div style="margin-bottom:2px;">
+ <label id="lblMetaDescription">&lt;meta name=&quot;description&quot; content=&quot;</label>
+ <input id="txtMetaDescription" style="width:432px;" type="text" value="">
+ <label id="lblMetaDescription2">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:6px;">
+ <label id="lblMetaRobots">&lt;meta name=&quot;robots&quot; content=&quot;</label>
+ <input id="txtMetaRobots" style="width:472px;" type="text" value="index,follow">
+ <label id="lblMetaRobots2">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:8px;">
+ <input id="chkNoIndex" type="checkbox" style="margin-left:8px;">
+ <label id="lblNoIndex" for="chkNoIndex">noindex</label>
+ <input id="chkNoFollow" type="checkbox" style="margin-left:15px;">
+ <label id="lblNoFollow" for="chkNoFollow">nofollow</label>
+ <input id="chkNoODP" type="checkbox" style="margin-left:15px;">
+ <label id="lblNoODP" for="chkNoODP">noodp</label>
+ <input id="chkNoydir" type="checkbox" style="margin-left:15px;">
+ <label id="lblNoydir" for="chkNoydir">noydir</label>
+ <input id="chkNoArchive" type="checkbox" style="margin-left:15px;">
+ <label id="lblNoArchive" for="chkNoArchive">noarchive</label>
+ <input id="chkNoSnippet" type="checkbox" style="margin-left:15px;">
+ <label id="lblNoSnippet" for="chkNoSnippet">nosnippet</label>
+ <input id="chkNoImageIndex" type="checkbox" style="margin-left:15px;">
+ <label id="lblNoImageIndex" for="chkNoImageIndex">noimageindex</label>
+</div>
+
+<div style="margin-bottom:6px;">
+ <label id="lblMetaViewport">&lt;meta name=&quot;viewport&quot; content=&quot;</label>
+ <input id="txtMetaViewport" style="width:456px;" type="text" value="width=device-width,initial-scale=1.0">
+ <label id="lblMetaViewport2">&quot;&gt;</label>
+</div>
+
+
+<div style="margin-bottom:8px;">
+ <input id="chkWidth" type="checkbox" checked="checked" style="margin-left:8px;">
+ <label id="lblWidth" for="chkWidth">width</label>
+ <input id="chkHeight" type="checkbox" style="margin-left:13px;">
+ <label id="lblHeight" for="chkHeight">height</label>
+ <input id="chkInitialScale" type="checkbox" checked="checked" style="margin-left:13px;">
+ <label id="lblInitialScale" for="chkInitialScale">initial-scale</label>
+ <input id="chkMinimumScale" type="checkbox" style="margin-left:13px;">
+ <label id="lblMinimumScale" for="chkMinimumScale">minimum-scale</label>
+ <input id="chkMaximumScale" type="checkbox" style="margin-left:13px;">
+ <label id="lblMaximumScale" for="chkMaximumScale">maximum-scale</label>
+ <input id="chkUserScalable" type="checkbox" style="margin-left:13px;">
+ <label id="lblUserScalable" for="chkUserScalable">user-scalable</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblBaseHref">&lt;base href=&quot;</label>
+ <input id="txtBaseHref" style="width:445px;" type="text" value="">
+ <label id="lblBaseHref2">&quot; target=&quot;</label>
+ <input id="txtBaseHref2" style="width:63px;" type="text" value="_self">
+ <label id="lblBaseHref3">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblCano">&lt;link rel=&quot;canonical&quot; href=&quot;</label>
+ <input id="txtCano" style="width:480px;" type="text" value="">
+ <label id="lblCano2">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblFavIcon">&lt;link rel=&quot;icon&quot; href=&quot;</label>
+ <input id="txtFavIcon" style="width:184px;" type="text" value="">
+ <label id="lblFavIcon2">&quot; sizes=&quot;</label>
+ <input id="txtFavIcon2" style="width:48px;text-align:center;" type="text" value="16x16">
+ <label id="lblFavIcon3">&quot; type=&quot;</label>
+ <input id="txtFavIcon3" style="width:112px;" type="text" value="image/x-icon">
+ <label id="lblFavIcon4">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblRSS">&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; href=&quot;</label>
+ <input id="txtRSS" style="width:264px;" type="text" value="">
+ <label id="lblRSS2">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblCSS">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;</label>
+ <input id="txtCSS" style="width:263px;" type="text" value="">
+ <label id="lblCSS2">&quot;&gt;</label>
+ <input id="chkNormalize" type="checkbox" style="margin-left:10px;">
+ <label id="lblNormalize" for="chkNormalize">Normalize</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblJS">&lt;script type=&quot;text/javascript&quot; src=&quot;</label>
+ <input id="txtJS" style="width:335px;" type="text" value="">
+ <label id="lblJS2">&quot; </label>
+ <a href="javascript:void(0)" id="lblJS3">async</a>
+ <label id="lblJS4">&gt;&lt;/script&gt;</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblAutoRefresh">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;</label>
+ <input id="txtAutoRefresh" style="width:40px;" type="text" value="">
+ <label id="lblAutoRefresh2">; URL=</label>
+ <input id="txtAutoRefresh2" style="width:307px;" type="text" value="">
+ <label id="lblAutoRefresh3">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblAppName">&lt;meta name=&quot;application-name&quot; content=&quot;</label>
+ <input id="txtAppName" style="width:391px;" type="text" value="">
+ <label id="lblAppName2">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblAuthorName">&lt;meta name=&quot;author&quot; content=&quot;</label>
+ <input id="txtAuthorName" style="width:471px;" type="text" value="">
+ <label id="lblAuthorName2">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <label id="lblLinkRelAuthor">&lt;link rel=&quot;author&quot; href=&quot;</label>
+ <input id="txtLinkRelAuthor" style="width:503px;" type="text" value="">
+ <label id="lblLinkRelAuthor2">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:8px;">
+ <label id="lblGoogleSiteVerify">&lt;meta name=&quot;google-site-verification&quot; content=&quot;</label>
+ <input id="txtGoogleSiteVerify" style="width:327px;" type="text" value="">
+ <label id="lblGoogleSiteVerify2">&quot;&gt;</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <input id="chkjquery" type="checkbox" style="margin-left:8px;">
+ <label id="lbljquery" for="chkjquery">jQuery</label>
+ <input id="chkjqueryUI" type="checkbox" style="margin-left:15px;">
+ <label id="lbljqueryUI" for="chkjqueryUI">jQuery UI</label>
+ <input id="chkjqueryMobile" type="checkbox" style="margin-left:15px;">
+ <label id="lbljqueryMobile" for="chkjqueryMobile">jQuery Mobile</label>
+ <input id="chkAngularJS" type="checkbox" style="margin-left:15px;">
+ <label id="lblAngularJS" for="chkAngularJS">AngularJS</label>
+ <input id="chkAngularMaterial" type="checkbox" style="margin-left:15px;">
+ <label id="lblchkAngularMaterial" for="chkAngularMaterial">Angular Material</label>
+ <input id="chkMooTools" type="checkbox" style="margin-left:15px;">
+ <label id="lblMooTools" for="chkMooTools">MooTools</label>
+</div>
+
+<div style="margin-bottom:2px;">
+ <input id="chkTwitterCard" type="checkbox" style="margin-left:8px;">
+ <label id="lblTwitterCard" for="chkTwitterCard">Add Twitter Tags</label>
+ <input id="chkGoogleFonts" type="checkbox" style="margin-left:34px;">
+ <label id="lblGoogleFonts" for="chkGoogleFonts">Add Google Fonts</label>
+ <input id="chkFontAwesome" type="checkbox" style="margin-left:27px;">
+ <label id="lblFontAwesome" for="chkFontAwesome">Add FontAwesome Icons</label>
+ <input id="chkHTMLKickStart" type="checkbox" style="margin-left:26px;">
+ <label id="lblHTMLKickStart" for="chkHTMLKickStart">Add HTML KickStart</label>
+</div>
+
+<div style="margin-bottom:0px;">
+ <input id="chkOpenGraph" type="checkbox" style="margin-left:8px;">
+ <label id="lblOpenGraph" for="chkOpenGraph">Add Facebook Tags</label>
+ <input id="chkAdobeFonts" type="checkbox" style="margin-left:26px;">
+ <label id="lblAdobeFonts" for="chkAdobeFonts">Add Adobe Fonts</label>
+ <input id="chkEntypo" type="checkbox" style="margin-left:35px;">
+ <label id="lblEntypo" for="chkEntypo">Add Entypo+ Icons</label>
+ <input id="chkBootstrap" type="checkbox" style="margin-left:58px;">
+ <label id="lblBootstrap" for="chkBootstrap">Add Bootstrap</label>
+</div>
+
+
+</div>
+
+<!-- frmBody -->
+<div id="tab_body_form" class="frm" style="display:none;">
+
+<pre style="font:13px 'Droid Sans Mono'"> 
+This page will include <strong>&lt;body&gt;</strong> configuration options...
+
+-background color
+-background gradient
+-background pattern
+-background texture
+-background image
+-page width
+-layout structure
+-body onload javascript
+
+(WORK IN PROGRESS)
+</pre>
+
+</div>
+
+<!-- frmHeader -->
+<div id="tab_header_form" class="frm" style="display:none;">
+
+<pre style="font:13px 'Droid Sans Mono'"> 
+This page will include <strong>&lt;header&gt;</strong> configuration options...
+
+-width
+-height
+-background color
+-background gradient
+-site logo
+-navigation bar
+
+(WORK IN PROGRESS)
+</pre>
+
+</div>
+
+
+<!-- frmMain -->
+<div id="tab_main_form" class="frm" style="display:none;">
+
+<pre style="font:13px 'Droid Sans Mono'"> 
+This page will include <strong>&lt;main&gt;</strong> configuration options...
+
+-add and customize html elements
+
+(WORK IN PROGRESS)
+</pre>
+
+</div>
+
+<!-- frmFooter -->
+<div id="tab_footer_form" class="frm" style="display:none;">
+
+<pre style="font:13px 'Droid Sans Mono'"> 
+This page will include <strong>&lt;footer&gt;</strong> configuration options...
+
+-width
+-height
+-background color
+-number of columns
+-text
+
+(WORK IN PROGRESS)
+</pre>
+
+</div>
+
+<!-- frmResults -->
+<div id="tab_gen_form" class="frm" style="display:none;">
+ <textarea id="txtResults"></textarea>
+</div>
+
+</td>
+</tr>
+</table>
+
+
+<input type="hidden" name="data" id="codepen_html" value="">
+</form>
+</body>
+</html>

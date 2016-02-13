@@ -1,0 +1,468 @@
+html, form {
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+body, form {
+ position: relative;
+ margin: 0;
+ padding: 0;
+}
+
+body {
+ margin: 0;
+ padding: 0;
+ height: 100%;
+ background-size: auto;
+}
+
+div, ul, li {
+ margin: 0;
+ padding: 0;
+ border: none;
+}
+
+ul {
+ list-style-type: none;
+ list-style-position: inside;
+}
+
+table, tr, td {
+ margin: 0;
+ padding: 0;
+ border-spacing: 0;
+ border: none;
+ border-collapse: collapse;
+}
+
+label {
+ font-family: 'Droid Sans Mono', monospace;
+ font-size: 13px;
+ vertical-align: middle;
+}
+
+a#lblLookuplang, a#lblJS3, a#lblTwitterSummary, a#lblOgType {
+ font-family: 'Droid Sans Mono', monospace;
+ font-size: 13px;
+ font-weight: normal;
+ color: #0000FF;
+}
+
+a#lblLookuplang:hover, a#lblJS3:hover, a#lblTwitterSummary:hover, a#lblOgType:hover { color: #FF0000; }
+a#lblJS3, a#lblJS3:hover, a#lblTwitterSummary, a#lblTwitterSummary:hover, a#lblOgType, a#lblOgType:hover { text-decoration: none; font-weight: bold; }
+
+input[type="text"], input[type="number"] {
+ font-family: 'Droid Sans Mono', monospace;
+ font-size: 13px;
+ height: 23px;
+ border: 1px solid #A0A0A0;
+ padding: 1px 5px;
+}
+
+input[type="checkbox"] {
+ vertical-align: middle;
+}
+
+input[type="text"]:focus {
+ /* background-color: #FFFFC8; */
+}
+
+.m {
+ position: absolute;
+ font-family: 'Droid Sans Mono';
+ font-size: 13px;
+}
+
+a.m { color: #0000FF; }
+a.m:hover { color: #FF0000; }
+
+a.bbar_tab {
+ display: block;
+ color: #C1C1C1;
+ background-color: #424F5A;
+ border-left: 4px solid #424F5A;
+ padding-top: 12px;
+ padding-bottom: 12px;
+ padding-left: 15px;
+ font-family: tahoma, sans-serif;
+ font-size: 14px;
+ text-decoration: none;
+}
+
+a.bbar_tab:hover {
+ background-color: #5E6972;
+ border-left: 4px solid #5E6972;
+}
+
+a.bbar_tab_sel {
+ display: block;
+ color:#F2F2F2;
+ background-color:#343F48;
+ border-left:4px solid #FF9500;
+ padding-top: 12px;
+ padding-bottom: 12px;
+ padding-left: 15px;
+ font-family: tahoma, sans-serif;
+ font-size: 14px;
+ text-decoration: none;
+}
+
+.chkimg {
+ display: block;
+ margin: 0;
+ padding: 0;
+ position: relative;
+ z-index: 1;
+ left: 5px;
+ margin-top: 2px;
+ background-color: transparent;
+ width: 13px;
+ height: 13px;
+}
+
+.mt {
+ position: absolute;
+ background-color: white;
+ font-family: 'Droid Sans Mono',monospace;
+ font-size: 13px;
+}
+
+.mt[type="text"] {
+ height: 23px;
+ border: 1px solid #7F9DB9;
+ padding: 1px 5px;
+}
+
+.mt[type="checkbox"] {
+ background-color: inherit;
+}
+
+#frmCSP_List1 option, #frmCSP_List2 option {
+ margin: 0;
+ padding: 0;
+ padding-left: 23px;
+ height: 15px;
+}
+
+.frm {
+ background-color: #F0F0F0;
+ color: #0A0A0A;
+ border-radius: 13px;
+ box-shadow: 0px 0px 6px rgba(0,0,0,0.25);
+ padding: 20px 20px 20px 25px;
+ border: 1px solid #C8C8C8;
+ margin-bottom: 30px;
+ max-width: 789px;
+ margin-left: auto;
+ margin-right: auto;
+ position: relative;
+}
+
+#txtResults {
+ width: 775px;
+ height: 500px;
+ margin: 0;
+ padding: 0;
+ margin-left: 4px;
+ margin-top: 7px;
+ margin-bottom: 4px;
+ border-radius: 7px;
+ vertical-align: top;
+ font-family: 'Droid Sans Mono', monospace;
+ font-size: 13px;
+ white-space: nowrap;
+}
+
+/* ************************************************************ frmOg *********************************************************** */
+
+#frmOg {
+ display: none;
+ position: absolute;
+ z-index: 1000;
+ top: 55px;
+ left: 30.5%;
+ width: 590px;
+ height: 531px;
+ background-color: #ECE9D8;
+ border: 3px solid #4F53BC;
+ border-radius: 9px;
+ box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#frmOg_title {
+ background-color: #3C8FD7;
+ color: #F9FAFB;
+ padding: 9px 20px;
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 18px;
+ font-weight: normal;
+}
+
+#frmOg .line {
+ margin-bottom: 2px;
+ width: 92%;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+#frmOg_btnOK {
+ position: absolute;
+ bottom: 20px;
+ left: 225px;
+ font-family: 'MS Sans Serif', sans-serif;
+ font-size: 11px;
+ width: 137px;
+ height: 41px;
+ margin: 0;
+ padding: 0;
+}
+
+/* ************************************************************ frmTwitter *********************************************************** */
+
+#frmTwitter {
+ display: none;
+ position: absolute;
+ top: 55px;
+ left: 30.5%;
+ z-index: 1000;
+ width: 509px;
+ height: 430px;
+ background-color: #ECE9D8;
+ border: 3px solid #4F53BC;
+ border-radius: 9px;
+ box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#frmTwitter_title {
+ background-color: #3C8FD7;
+ color: #F9FAFB;
+ padding: 9px 20px;
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 18px;
+ font-weight: normal;
+}
+
+#frmTwitter_Label2 {
+ margin-top: 16px;
+ margin-left: auto;
+ margin-right: auto;
+ width: 90%;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 16px;
+}
+
+#frmTwitter_p1 {
+ margin-bottom: 0;
+ padding-bottom: 0;
+ margin-left: auto;
+ margin-right: auto;
+ width: 90%;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 16px;
+}
+
+#frmTwitter_p2 {
+ margin-top: 0;
+ padding-top: 0;
+ margin-left: auto;
+ margin-right: auto;
+ width: 90%;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 16px;
+}
+
+#frmTwitter .line {
+ margin-bottom: 2px;
+ width: 90%;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+#frmTwitter_btnOK {
+ position: absolute;
+ top: 363px;
+ left: 176px;
+ font-family: 'MS Sans Serif', sans-serif;
+ font-size: 11px;
+ width: 137px;
+ height: 41px;
+ margin: 0;
+ padding: 0;
+}
+
+/* ************************************************************ frmCSP *********************************************************** */
+
+#frmCSP {
+ display: none;
+ position: absolute;
+ z-index: 1000;
+ top: 55px;
+ left: 30.5%;
+ width: 450px;
+ height: 540px;
+ background-color: #ECE9D8;
+ border: 3px solid #4F53BC;
+ border-radius: 9px;
+ box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#frmCSP_title {
+ background-color: #3C8FD7;
+ color: #F9FAFB;
+ padding: 9px 20px;
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 18px;
+ font-weight: normal;
+}
+
+#frmCSP_Label2 {
+ position: absolute;
+ top: 57px;
+ left: 22px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 16px;
+}
+
+#frmCSP_Label1 {
+ position: absolute;
+ top: 144px;
+ left: 22px;
+ font-family: 'MS Sans Serif', sans-serif;
+ font-size: 11px;
+}
+
+#directives_div {
+ position: absolute;
+ top: 160px;
+ left: 22px;
+ width: 175px;
+ height: 303px;
+}
+
+#frmCSP_List1 {
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 100%;
+ height: 100%;
+ border: 1px solid #7F9DB9;
+ font-family: 'Tahoma', sans-serif;
+ font-size: 11px;
+}
+
+#frmCSP_Label3 {
+ position: absolute;
+ top: 144px;
+ left: 216px;
+ font-family: 'MS Sans Serif', sans-serif;
+ font-size: 11px;
+}
+
+#allowed_values_div {
+ position: absolute;
+ top: 160px;
+ left: 216px;
+ width: 210px;
+ height: 303px;
+}
+
+#frmCSP_List2 {
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 100%;
+ height: 100%;
+ border: 1px solid #7F9DB9;
+ font-family: 'Tahoma', sans-serif;
+ font-size: 11px;
+}
+
+#frmCSP_btnOK {
+ position: absolute;
+ top: 480px;
+ left: 146px;
+ font-family: 'MS Sans Serif', sans-serif;
+ font-size: 11px;
+ width: 137px;
+ height: 41px;
+ margin: 0;
+ padding: 0;
+}
+
+/* ************************************************************ frmHtmlLang *********************************************************** */
+
+#frmHtmlLang {
+ display: none;
+ position: absolute;
+ z-index: 1000;
+ top: 160px;
+ left: 34%;
+ width: 370px;
+ height: 325px;
+ background-color: #ECE9D8;
+ border: 3px solid #4F53BC;
+ border-radius: 9px;
+ box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#frmHtmlLang_title {
+ background-color: #3C8FD7;
+ color: #F9FAFB;
+ padding: 9px 20px;
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ font-family: 'Open Sans',sans-serif;
+ font-size: 18px;
+ font-weight: normal;
+}
+
+#lblCaption {
+ position: absolute;
+ top: 56px;
+ left: 22px;
+ font-family: 'MS Sans Serif', sans-serif;
+ font-size: 11px;
+}
+
+#lstLangs {
+ position: absolute;
+ top: 76px;
+ left: 22px;
+ width: 325px;
+ height: 175px;
+ border: 1px solid #7F9DB9;
+ font-family: 'Droid Sans Mono', monospace;
+ font-size: 13px;
+}
+
+#frmHtmlLang_btnOK {
+ font-family: 'MS Sans Serif', sans-serif;
+ font-size: 11px;
+ width: 113px;
+ height: 41px;
+ margin: 0;
+ padding: 0;
+ position: absolute;
+ top: 265px;
+ left: 60px;
+}
+
+#frmHtmlLang_btnCancel {
+ font-family: 'MS Sans Serif', sans-serif;
+ font-size: 11px;
+ width: 113px;
+ height: 41px;
+ margin: 0;
+ padding: 0;
+ position: absolute;
+ top: 265px;
+ left: 199px;
+}
