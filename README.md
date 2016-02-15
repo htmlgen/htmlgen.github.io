@@ -80,7 +80,7 @@ The <a href="https://developers.google.com/webmasters/control-crawl-index/docs/r
 You may also consider adding these additional options manually...<br>
 
 `notranslate`: Do not offer translation of this page in search results<br>
-`unavailable_after`: [RFC-850 date/time] Do not show this page in search results after the specified date/time. The date/time must be specified in the RFC 850 format<br>
+`unavailable_after`: [RFC-850 date/time] Do not show this page in search results after the specified date/time. The date/time must be specified in the RFC 850 format (example: 25-Aug-2007 15:00:00 EST)<br>
 
 
 <b>`<meta name="viewport" content="` ...  `">`</b><br>
