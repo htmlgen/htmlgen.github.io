@@ -193,6 +193,7 @@ function window_onload() {
  if (window.addEventListener) {document.getElementById('chkUserScalable').addEventListener('click',build_viewport_string);}else{document.getElementById('chkUserScalable').attachEvent('onclick',build_viewport_string);}
 
  if (window.addEventListener) {document.getElementById('lblJS3').addEventListener('click',lblJS3_Click);}else{document.getElementById('lblJS3').attachEvent('onclick',lblJS3_Click);}
+ if (window.addEventListener) {document.getElementById('lblRSS3').addEventListener('click',lblRSS3_Click);}else{document.getElementById('lblRSS3').attachEvent('onclick',lblRSS3_Click);}
  if (window.addEventListener) {document.getElementById('lblTwitterSummary').addEventListener('click',lblTwitterSummary_Click);}else{document.getElementById('lblTwitterSummary').attachEvent('onclick',lblTwitterSummary_Click);}
  if (window.addEventListener) {document.getElementById('lblOgType').addEventListener('click',lblOgType_Click);}else{document.getElementById('lblOgType').attachEvent('onclick',lblOgType_Click);}
 
@@ -573,6 +574,17 @@ function lblJS3_Click(e) {
  }
  else if (document.getElementById('lblJS3').textContent.trim() == "") {
   document.getElementById('lblJS3').textContent = "async";
+ }
+}
+
+function lblRSS3_Click(e) {
+ if (document.getElementById('lblRSS3').textContent == "application/rss+xml") {
+  document.getElementById('lblRSS3').textContent = "application/atom+xml";
+  document.getElementById('txtRSS').style.width = "261px";
+ }
+ else if (document.getElementById('lblRSS3').textContent == "application/atom+xml") {
+  document.getElementById('lblRSS3').textContent = "application/rss+xml";
+  document.getElementById('txtRSS').style.width = "269px";
  }
 }
 
@@ -1006,7 +1018,7 @@ if (document.getElementById('txtAuthorName').value != "") {
 if (document.getElementById('txtMetaDescription').value != "") {
  h = h + "<meta name=\"description\" content=\"" + document.getElementById('txtMetaDescription').value.replace(/\u0022/g, "&quot;") + "\">" + "\n";
 }
-//h = h + "<meta name=\"generator\" content=\"HTMLPro.io\">" + "\n";
+//h = h + "<meta name=\"generator\" content=\"htmlgen.github.io\">" + "\n";
 if (document.getElementById('txtMetaViewport').value != "") {
  h = h + "<meta name=\"viewport\" content=\"" + document.getElementById('txtMetaViewport').value.replace(/\u0022/g, "&quot;") + "\">" + "\n";
 }
@@ -1079,8 +1091,14 @@ if (document.getElementById('chkOpenGraph').checked == true) {
  //h = h + "<!-- <link rel=\"apple-touch-icon-precomposed\" sizes=\"76x76\" href=\"apple-touch-icon-76x76-precomposed.png\"> -->" + "\n";
  //h = h + "<!-- <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"apple-touch-icon-72x72-precomposed.png\"> -->" + "\n";
  //h = h + "<!-- <link rel=\"apple-touch-icon-precomposed\" href=\"apple-touch-icon-57x57-precomposed.png\"> -->" + "\r\n";
+
  if (document.getElementById('txtRSS').value != "") {
-  h = h + "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"" + document.getElementById('txtTitle').value.replace(/\u0022/g, "&quot;") + " RSS 2.0 Feed" + "\" href=\"" + document.getElementById('txtRSS').value.replace(/\u0022/g, "&quot;") + "\">" + "\n";
+  if (document.getElementById('lblRSS3').textContent == "application/rss+xml") {
+   h = h + "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"" + document.getElementById('txtTitle').value.replace(/\u0022/g, "&quot;") + " RSS Feed" + "\" href=\"" + document.getElementById('txtRSS').value.replace(/\u0022/g, "&quot;") + "\">" + "\n";
+  }
+  else if (document.getElementById('lblRSS3').textContent == "application/atom+xml") {
+   h = h + "<link rel=\"alternate\" type=\"application/atom+xml\" title=\"" + document.getElementById('txtTitle').value.replace(/\u0022/g, "&quot;") + " ATOM Feed" + "\" href=\"" + document.getElementById('txtRSS').value.replace(/\u0022/g, "&quot;") + "\">" + "\n";
+  }
  }
 
  // Normalize CSS

@@ -43,15 +43,15 @@ label {
  vertical-align: middle;
 }
 
-a#lblLookuplang, a#lblJS3, a#lblTwitterSummary, a#lblOgType {
+a#lblLookuplang, a#lblJS3, a#lblRSS3, a#lblTwitterSummary, a#lblOgType {
  font-family: 'Droid Sans Mono', monospace;
  font-size: 13px;
  font-weight: normal;
  color: #0000FF;
 }
 
-a#lblLookuplang:hover, a#lblJS3:hover, a#lblTwitterSummary:hover, a#lblOgType:hover { color: #FF0000; }
-a#lblJS3, a#lblJS3:hover, a#lblTwitterSummary, a#lblTwitterSummary:hover, a#lblOgType, a#lblOgType:hover { text-decoration: none; font-weight: bold; }
+a#lblLookuplang:hover, a#lblJS3:hover, a#lblRSS3:hover, a#lblTwitterSummary:hover, a#lblOgType:hover { color: #FF0000; }
+a#lblJS3, a#lblJS3:hover, a#lblRSS3, a#lblRSS3:hover, a#lblTwitterSummary, a#lblTwitterSummary:hover, a#lblOgType, a#lblOgType:hover { text-decoration: none; font-weight: normal; }
 
 input[type="text"], input[type="number"] {
  font-family: 'Droid Sans Mono', monospace;
@@ -104,7 +104,7 @@ a.bbar_tab_sel {
  padding-top: 12px;
  padding-bottom: 12px;
  padding-left: 15px;
- font-family: tahoma, sans-serif;
+ font-family: 'Open Sans', sans-serif;
  font-size: 14px;
  text-decoration: none;
 }
