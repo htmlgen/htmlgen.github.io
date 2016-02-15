@@ -1,7 +1,7 @@
 # What is it?
 This tool is similar in nature to <a href="https://html5boilerplate.com/">html5boilerplate.com</a>, <a href="http://www.initializr.com/">initializr.com</a>, <a href="http://htmlshell.com/">htmlshell.com</a> or <a href="http://sanusart.github.io/html-now/">sanusart.github.io/html-now/</a>. It is a free configurable boilerplate you can use to quickly generate the starting code necassary for any <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> project.
 
-Over time I plan to add more features and make it a more fleshed out and complete visual HTML design tool but for right now it just focuses on the `<HEAD>` element and generates code for all of the possible things you might want to include there.
+Over time I plan to add more features and make it a more fleshed out and complete visual HTML designer but for right now it just focuses on the `<HEAD>` element and generates code for all of the possible things you might want to include there. Volunteers, code and suggestions are all welcome at this point.
 
 # How do I use it?
 Visit <a href="http://htmlgen.github.io/" target="_blank">htmlgen.github.io</a>. On the left side of the screen you should see a menu with these options...
@@ -27,7 +27,7 @@ Quote from the <a href="https://www.w3.org/International/questions/qa-html-langu
 "Always use a language attribute on the `<html>` element. This is inherited by all other elements, and so will set a default language for the text in the document head element. You should use the `<html>` element rather than the `<body>` element since the `<body>` element doesn't cover the text inside the document's `<head>` element."
 </em>
 
-For example if you press "Look Up" and type `English` as your language and `Canada` as your region it will fill in `en-CA` as your `lang` attribute. It features a built in look-up table of 8,094 languages and 251 regions so you don't have to go consulting a <a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">huge list like this</a> every time.
+For example if you press "Look Up" and type `english` as your language and `canada` as your region it will fill in `en-CA` as your `lang` attribute. It features a built in look-up table of 8,094 languages and 251 regions so you don't have to go consulting a <a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">huge list like this</a> every time.
 
 <b>Content-Security-Policy</b><br>
 Checking the `Content-Security-Policy` checkbox allows you to customize a `Content-Security-Policy` `<META>` tag which will be included with your HTML. <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">Content-Security-Policy</a> (CSP) aims to prevent cross-site scripting (XSS), clickjacking and other code injection attacks resulting from execution of malicious content in the trusted web page context. Basically it allows you to precisely control and configure where dynamic resources are allowed to load from in your page.
@@ -54,8 +54,6 @@ Checking the `Do not cache` checkbox will add the following lines of codes to yo
 `<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>`<br>
 `<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>`<br>
 `<![endif]-->`<br>
-
-This is optional but is recommended if you know you're going to be serving legacy IE users.
 
 <b>`<title> ... </title>`</b><br>
 This textbox allows you to type in the <a href="https://www.w3.org/TR/html5/document-metadata.html#the-title-element">title</a> of your document. If you care about SEO you should keep it under 70 characters (<a href="https://moz.com/learn/seo/title-tag">preferably in the 50-60 character range</a>).
@@ -102,7 +100,7 @@ The <a href="https://support.google.com/webmasters/answer/139066?hl=en#2">rel="c
 <b>`<link rel="icon" href="` ... `" sizes="16x16" type="image/x-icon">`</b><br>
 The <a href="https://www.w3.org/TR/html5/links.html#rel-icon">rel="icon" link element</a> specifies a <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a> representing the page or site and should be used by the user agent when representing the page in the user interface.
 
-For historical reasons the icon keyword may be preceded by the keyword "shortcut". If the "shortcut" keyword is present, it must be come immediately before the icon keyword and the two keywords must be separated by only a single space.
+For historical reasons the icon keyword may be preceded by the keyword "shortcut". If the "shortcut" keyword is present, it must come immediately before the icon keyword and the two keywords must be separated by only a single space.
 
 <b>`<link rel="alternate" type="application/atom+xml" href="` ... `">`</b><br>
 This box allows you to specify the URL of your site's <a href="https://en.wikipedia.org/wiki/RSS">RSS</a> or <a href="https://en.wikipedia.org/wiki/Atom_(standard)">Atom feed</a>. The first <a href="https://www.w3.org/TR/html5/links.html#rel-alternate">link element</a> in the document with the `alternate` keyword used with the `type` attribute set to the value `application/rss+xml` or `application/atom+xml` is treated as the default syndication feed for the purposes of feed autodiscovery.
@@ -116,7 +114,9 @@ Specifying `type="text/css"` is <a href="https://www.w3.org/TR/html51/semantics.
 Checking this checkbox will include the very popular <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> which is a collection of CSS properties that is intended to make browsers render all elements more consistently and in line with modern standards. For the purposes of quick testing and debugging it is placed in a `<STYLE>` element but for production purposes it is recommended to move it to an external stylesheet and use the `<link rel="stylesheet" href="...">` syntax.
 
 <b>`<script type="text/javascript" src="` ... `" async></script>`</b><br>
-This box allows you to specify an external <a href="https://en.wikipedia.org/wiki/JavaScript">javascript</a> file you would like to include with your page. <a href="https://www.w3.org/TR/html51/semantics.html#the-script-element">New in HTML5</a> is the ability to specify an <b>`async`</b> or <b>`defer`</b> attribute with your script that indicates when the script should be executed.
+This box allows you to specify an external <a href="https://en.wikipedia.org/wiki/JavaScript">javascript</a> file you would like to include with your page.
+
+<a href="https://www.w3.org/TR/html51/semantics.html#the-script-element">New in HTML5</a> is the ability to specify an <b>`async`</b> or <b>`defer`</b> attribute with your script that indicates when the script should be executed.
 
 <b>`async`</b>: the script will be executed as soon as it is available, but without blocking further parsing of the page<br>
 <b>`defer`</b>: the script will be executed when the page has finished parsing<br>
