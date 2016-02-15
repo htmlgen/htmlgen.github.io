@@ -998,9 +998,14 @@ if (document.getElementById('txtBaseHref').value != "") {
  h = h + "<base href=\"" + document.getElementById('txtBaseHref').value.replace(/\u0022/g, "&quot;") + "\" target=\"" + document.getElementById('txtBaseHref2').value.replace(/\u0022/g, "&quot;") + "\">" + "\n";
 }
 //h = h + "<!-- <meta http-equiv=\"default-style\" content=\"\"> -->" + "\n";
+
 if (document.getElementById('txtAutoRefresh2').value != "") {
  h = h + "<meta http-equiv=\"refresh\" content=\"" + ((document.getElementById('txtAutoRefresh').value == "") ? "0" : document.getElementById('txtAutoRefresh').value.replace(/\u0022/g, "&quot;")) + "; URL=" + document.getElementById('txtAutoRefresh2').value.replace(/\u0022/g, "&quot;") + "\">" + "\n";
 }
+else if ((document.getElementById('txtAutoRefresh2').value == "") && (document.getElementById('txtAutoRefresh').value != "")) {
+ h = h + "<meta http-equiv=\"refresh\" content=\"" + document.getElementById('txtAutoRefresh').value.replace(/\u0022/g, "&quot;") + "\">" + "\n";
+}
+
 if (document.getElementById('chkDontCache').checked == true) {
  h = h + "<meta http-equiv=\"expires\" content=\"0\">" + "\n";
  h = h + "<meta http-equiv=\"pragma\" content=\"no-cache\">" + "\n";
