@@ -116,7 +116,7 @@ Checking this checkbox will include the very popular <a href="http://necolas.git
 <b>`<script type="text/javascript" src="` ... `" async></script>`</b><br>
 This box allows you to specify an external <a href="https://en.wikipedia.org/wiki/JavaScript">javascript</a> file you would like to include with your page.
 
-<a href="https://www.w3.org/TR/html51/semantics.html#the-script-element">New in HTML5</a> is the ability to specify an <b>`async`</b> or <b>`defer`</b> attribute with your script that indicates when the script should be executed.
+<a href="https://www.w3.org/TR/html51/semantics.html#the-script-element">New in HTML5</a> is the ability to specify an <b>`async`</b> or <b>`defer`</b> attribute with your script that indicates when the script should be executed. These only have effect when used with the `src` attribute.
 
 <b>`async`</b>: the script will be executed as soon as it is available, but without blocking further parsing of the page<br>
 <b>`defer`</b>: the script will be executed when the page has finished parsing<br>
