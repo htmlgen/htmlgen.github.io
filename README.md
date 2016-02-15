@@ -4,7 +4,7 @@ This tool is similar in nature to <a href="https://html5boilerplate.com/">html5b
 Over time I plan to add more features and make it a more fleshed out and complete visual HTML design tool but for right now it just focuses on the `<HEAD>` element and generates code for all of the possible things you might want to include there.
 
 # How do I use it?
-On the left side of the screen you should see a menu with these options...
+Visit <a href="http://htmlgen.github.io/" target="_blank">htmlgen.github.io</a>. On the left side of the screen you should see a menu with these options...
 
 `<HEAD>`<br>
 `<BODY>`<br>
@@ -39,7 +39,7 @@ An example `Content-Security-Policy` might look like this...
 This only allows dynamic resources from the <b>same origin</b> to be loaded. For more details and examples of how `Content-Security-Policy` can be used you can check out <a href="http://content-security-policy.com/">content-security-policy.com</a> or <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">Wikipedia</a>.
 
 <b>Do not cache</b><br>
-Checking the `Do not cache` checkbox will add the following lines of codes to your HTML to instruct the browser not to cache the page.
+Checking the `Do not cache` checkbox will add the following lines of codes to your HTML to instruct the browser to not cache the page.
 
 `<meta http-equiv="expires" content="0">`<br>
 `<meta http-equiv="pragma" content="no-cache">`<br>
@@ -55,16 +55,16 @@ Checking the `Do not cache` checkbox will add the following lines of codes to yo
 `<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>`<br>
 `<![endif]-->`<br>
 
-It's up to you whether or not you want to include this option.
+This is optional but is recommended if you know you're going to be serving legacy IE users.
 
 <b>`<title> ... </title>`</b><br>
-This textbox allows you to type in the <a href="https://www.w3.org/TR/html5/document-metadata.html#the-title-element">title</a> of your document. If you care about SEO you should keep your title under 70 characters (<a href="https://moz.com/learn/seo/title-tag">preferably in the 50-60 character range</a>).
+This textbox allows you to type in the <a href="https://www.w3.org/TR/html5/document-metadata.html#the-title-element">title</a> of your document. If you care about SEO you should keep it under 70 characters (<a href="https://moz.com/learn/seo/title-tag">preferably in the 50-60 character range</a>).
 
 <b>`<meta name="description" content="` ...  `">`</b><br>
-This textbox allows you to type in your <a href="https://en.wikipedia.org/wiki/Meta_element#The_description_attribute">meta description</a>. If you care about SEO your description should ideally be <a href="https://moz.com/learn/seo/meta-description">150-160 characters</a>.
+This textbox allows you to type in your <a href="https://en.wikipedia.org/wiki/Meta_element#The_description_attribute">meta description</a>. If you care about SEO your description should ideally be <a href="https://moz.com/learn/seo/meta-description">150-160 characters</a> long.
 
 <b>`<meta name="keywords" content="` ...  `">`</b><br>
-As of 2009 Google <a href="https://googlewebmastercentral.blogspot.com/2009/09/google-does-not-use-keywords-meta-tag.html">has stated</a> that they no longer use `<meta name="keywords">` in their search ranking algorithm so this tool does not include them. They are considered antiquated and useless on modern websites.
+As of 2009 Google <a href="https://googlewebmastercentral.blogspot.com/2009/09/google-does-not-use-keywords-meta-tag.html">has stated</a> that they no longer use `<meta name="keywords">` in their search ranking algorithm so this tool does not include them. Meta keywords are considered antiquated and useless on modern websites.
 
 <b>`<meta name="robots" content="` ...  `">`</b><br>
 The <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">meta robots tag</a> controls how search engines crawl and index your page. It supports the following options...
@@ -105,7 +105,7 @@ The <a href="https://www.w3.org/TR/html5/links.html#rel-icon">rel="icon" link el
 
 For historical reasons the icon keyword may be preceded by the keyword "shortcut". If the "shortcut" keyword is present, it must be come immediately before the icon keyword and the two keywords must be separated by only a single space.
 
-<b>`<link rel="alternate" type="application/rss+xml" href="` ... `">`</b><br>
+<b>`<link rel="alternate" type="application/atom+xml" href="` ... `">`</b><br>
 This box allows you to specify the URL of your site's <a href="https://en.wikipedia.org/wiki/RSS">RSS</a> or <a href="https://en.wikipedia.org/wiki/Atom_(standard)">Atom feed</a>. The first <a href="https://www.w3.org/TR/html5/links.html#rel-alternate">link element</a> in the document with the `alternate` keyword used with the `type` attribute set to the value `application/rss+xml` or `application/atom+xml` is treated as the default syndication feed for the purposes of feed autodiscovery.
 
 <b>`<link rel="stylesheet" type="text/css" href="` ... `">`</b><br>
