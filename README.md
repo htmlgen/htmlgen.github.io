@@ -13,7 +13,7 @@ Visit <a href="http://htmlgen.github.io/" target="_blank">htmlgen.github.io</a>.
 `<FOOTER>`<br>
 `Get HTML`<br>
 
-These represent the differnet sections of your page which you can configure individually. Once you're finished customizing each section you can press the `Get HTML` button to generate all the HTML code for you which you can easily copy and paste into your favorite <a href="https://en.wikipedia.org/wiki/List_of_HTML_editors">HTML editor</a> (such as <a href="http://brackets.io/">Brackets</a> or <a href="https://notepad-plus-plus.org/">Notepad++</a>).
+These represent the different sections of your page which you can configure individually. Once you're finished customizing each section you can press the `Get HTML` button to generate all the HTML code for you which you can easily copy and paste into your favorite <a href="https://en.wikipedia.org/wiki/List_of_HTML_editors">HTML editor</a> (such as <a href="http://brackets.io/">Brackets</a> or <a href="https://notepad-plus-plus.org/">Notepad++</a>).
 
 ## `<HEAD>`
 
@@ -36,7 +36,7 @@ An example `Content-Security-Policy` might look like this...
 
 `<meta http-equiv="Content-Security-Policy" content="default-src 'self'">`<br>
 
-This only allows dynamic resources from the <b>same origin</b> to be loaded. For more details and examples of how `Content-Security-Policy` can be used you can check out <a href="http://content-security-policy.com/">content-security-policy.com</a> or <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">Wikipedia</a>.
+This only allows dynamic resources from the <b>same origin</b> to be loaded. For more details and examples of how `Content-Security-Policy` can be used you can check out <a href="http://content-security-policy.com/">content-security-policy.com</a> or <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">Wikipedia</a> or <a href="https://www.youtube.com/watch?v=pocsv39pNXA">YouTube</a>.
 
 <b>Do not cache</b><br>
 Checking the `Do not cache` checkbox will add the following lines of codes to your HTML to instruct the browser to not cache the page.
@@ -64,7 +64,7 @@ This textbox allows you to type in the <a href="https://www.w3.org/TR/html5/docu
 This textbox allows you to type in your <a href="https://en.wikipedia.org/wiki/Meta_element#The_description_attribute">meta description</a>. If you care about SEO your description should ideally be <a href="https://moz.com/learn/seo/meta-description">150-160 characters</a> long.
 
 <b>`<meta name="keywords" content="` ...  `">`</b><br>
-As of 2009 Google <a href="https://googlewebmastercentral.blogspot.com/2009/09/google-does-not-use-keywords-meta-tag.html">has stated</a> that they no longer use `<meta name="keywords">` in their search ranking algorithm so this tool does not include them. Meta keywords are considered antiquated and useless on modern websites.
+As of 2009 Google <a href="https://googlewebmastercentral.blogspot.com/2009/09/google-does-not-use-keywords-meta-tag.html">has stated</a> that they no longer use `<meta name="keywords">` in their search ranking algorithm so this tool does not include them. They are generally considered irrelevant for modern SEO.
 
 <b>`<meta name="robots" content="` ...  `">`</b><br>
 The <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">meta robots tag</a> controls how search engines crawl and index your page. It supports the following options...
@@ -81,7 +81,6 @@ You may also consider adding these additional options manually...<br>
 
 `notranslate`: Do not offer translation of this page in search results<br>
 `unavailable_after`: [RFC-850 date/time] Do not show this page in search results after the specified date/time. The date/time must be specified in the RFC 850 format (example: 25-Aug-2007 15:00:00 EST)<br>
-
 
 <b>`<meta name="viewport" content="` ...  `">`</b><br>
 The <a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport?hl=en">meta viewport tag</a> controls how the page is displayed on mobile devices. The <a href="http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho">consensus</a> among most modern web developers for the best user experience on mobile is to use the following as your meta viewport...
@@ -109,7 +108,34 @@ For historical reasons the icon keyword may be preceded by the keyword "shortcut
 This box allows you to specify the URL of your site's <a href="https://en.wikipedia.org/wiki/RSS">RSS</a> or <a href="https://en.wikipedia.org/wiki/Atom_(standard)">Atom feed</a>. The first <a href="https://www.w3.org/TR/html5/links.html#rel-alternate">link element</a> in the document with the `alternate` keyword used with the `type` attribute set to the value `application/rss+xml` or `application/atom+xml` is treated as the default syndication feed for the purposes of feed autodiscovery.
 
 <b>`<link rel="stylesheet" type="text/css" href="` ... `">`</b><br>
+This box allows you to specify an external <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS stylesheet</a> you would like to include with your page.
 
+Specifying `type="text/css"` is <a href="https://www.w3.org/TR/html51/semantics.html#the-style-element">technically unnecassary</a> in HTML5 as it is the default but it is a personal preference of mine. You are always free to delete it later if you don't want it.
+
+<b>Normalize</b><br>
+Checking this checkbox will include the very popular <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> which is a collection of CSS properties that is intended to make browsers render all elements more consistently and in line with modern standards. For the purposes of quick testing and debugging it is placed in a `<STYLE>` element but for production purposes it is recommended to move it to an external stylesheet and use the `<link rel="stylesheet" href="...">` syntax.
+
+<b>`<script type="text/javascript" src="` ... `" async></script>`</b><br>
+This box allows you to specify an external <a href="https://en.wikipedia.org/wiki/JavaScript">javascript</a> file you would like to include with your page. <a href="https://www.w3.org/TR/html51/semantics.html#the-script-element">New in HTML5</a> is the ability to specify an <b>`async`</b> or <b>`defer`</b> attribute with your script that indicates when the script should be executed.
+
+<b>`async`</b>: the script will be executed as soon as it is available, but without blocking further parsing of the page<br>
+<b>`defer`</b>: the script will be executed when the page has finished parsing<br>
+<b>`default`</b>: the script is fetched and executed immediately, before the user agent continues parsing the page<br>
+
+The <b>`defer`</b> attribute may be specified even if the <b>`async`</b> attribute is specified to cause legacy web browsers that only support <b>`defer`</b> (and not <b>`async`</b>) to fall back to the <b>`defer`</b> behaviour instead of the blocking behaviour that is the default.
+
+Specifying `type="text/javascript"` is <a href="https://www.w3.org/TR/html51/semantics.html#the-script-element">technically unnecassary</a> in HTML5 as it is the default but it is a personal preference of mine. You are always free to delete it later if you don't want it.
+
+<b>`<meta http-equiv="refresh" content="` ... `; URL=` ... `">`</b><br>
+The <a href="https://www.w3.org/TR/html51/semantics.html#attr-meta-http-equiv-refresh">`http-equiv="refresh" meta element`</a> acts as a timed redirect. If you just fill in <b>`content`</b> the page will automatically reload itself after that number of seconds has elapsed. If you fill in both <b>`content`</b> and <b>`URL`</b> the page will redirect do that desired page after X number of seconds. For example...
+
+`<meta http-equiv="refresh" content="300">`<br>
+will automatically reload the page from the server every 5 minutes<br>
+
+`<meta http-equiv="refresh" content="20; URL=page4.html">`<br>
+will automatically redirect to page4.html after 20 seconds has passed<br>
+
+<b>`<meta name="application-name" content="` ... `">`</b><br>
 
 
 
