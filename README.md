@@ -1,11 +1,127 @@
+# What is it?
+This tool is similar in nature to <a href="https://html5boilerplate.com/">html5boilerplate.com</a>, <a href="http://www.initializr.com/">initializr.com</a>, <a href="http://htmlshell.com/">htmlshell.com</a> or <a href="http://sanusart.github.io/html-now/">sanusart.github.io/html-now/</a>. It is a free configurable boilerplate you can use to quickly generate the starting code necassary for any <a href="https://www.w3.org/TR/html5/">HTML5</a> project.
+
+Over time I plan to add more features and make it a more fleshed out and complete visual HTML design tool but for right now it just focuses on the `<HEAD>` element and generates code for all of the possible things you might want to include there.
+
+# How do I use it?
+On the left side of the screen you should see a menu with these options...
+
+`<HEAD>`<br>
+`<BODY>`<br>
+`<HEADER>`<br>
+`<MAIN>`<br>
+`<FOOTER>`<br>
+`Get HTML`<br>
+
+These represent the differnet sections of your page which you can configure individually. Once you're finished customizing each section you can press the `Get HTML` button to generate all the HTML code for you which you can easily copy and paste into your favorite <a href="https://en.wikipedia.org/wiki/List_of_HTML_editors">HTML editor</a> (such as <a href="http://brackets.io/">Brackets</a> or <a href="https://notepad-plus-plus.org/">Notepad++</a>).
+
+## `<HEAD>`
+
+This page allows you to configure everything that appears in the <a href="https://www.w3.org/TR/html5/document-metadata.html#the-head-element">`<HEAD>`</a> element of your HTML document.
+
+<b>`<html lang="en">`</b><br>
+The <a href="https://www.w3.org/TR/html5/dom.html#attr-lang">lang</a> attribute of the `<html>` element tells browsers what language the page is written in. `en` (English) is pre-filled in by default but if you click on the "Look Up" link you can specify any language of your choosing and it will automatically fill in the correct `lang` code for you including both language and region.
+
+Quote from the <a href="https://www.w3.org/International/questions/qa-html-language-declarations">W3C</a>...<br>
+<em>
+"Always use a language attribute on the `<html>` element. This is inherited by all other elements, and so will set a default language for the text in the document head element. You should use the `<html>` element rather than the `<body>` element since the `<body>` element doesn't cover the text inside the document's `<head>` element."
+</em>
+
+For example if you press "Look Up" and type `English` as your language and `Canada` as your region it will fill in `en-CA` as your `lang` attribute. It features a built in look-up table of 8,094 languages and 251 regions so you don't have to go consulting a <a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">huge list like this</a> every time.
+
+<b>Content-Security-Policy</b><br>
+Checking the `Content-Security-Policy` checkbox allows you to customize a `Content-Security-Policy` `<META>` tag which will be included with your HTML. <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">Content-Security-Policy</a> (CSP) aims to prevent cross-site scripting (XSS), clickjacking and other code injection attacks resulting from execution of malicious content in the trusted web page context. Basically it allows you to precisely control and configure where dynamic resources are allowed to load from in your page.
+
+An example `Content-Security-Policy` might look like this...
+
+`<meta http-equiv="Content-Security-Policy" content="default-src 'self'">`<br>
+
+This only allows dynamic resources from the <b>same origin</b> to be loaded. For more details and examples of how `Content-Security-Policy` can be used you can check out <a href="http://content-security-policy.com/">content-security-policy.com</a> or <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">Wikipedia</a>.
+
+<b>Do not cache</b><br>
+Checking the `Do not cache` checkbox will add the following lines of codes to your HTML to instruct the browser not to cache the page.
+
+`<meta http-equiv="expires" content="0">`<br>
+`<meta http-equiv="pragma" content="no-cache">`<br>
+`<meta http-equiv="cache-control" content="no-cache">`<br>
+
+<b>HTML5 Shiv</b><br>
+<a href="https://github.com/afarkas/html5shiv">HTML5 Shiv</a> is an ongoing GitHub project which attempts to make HTML5 sectioning elements display correctly in Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x. Checking this checkbox will include the following lines of code in your HTML...
+
+`<!-- html5shiv.js: Enables HTML5 sectioning elements in legacy IE (`<a href="https://github.com/afarkas/html5shiv">https://github.com/afarkas/html5shiv</a>`) -->`<br>
+`<!-- respond.js: Enables min/max-width CSS3 media queries in legacy IE (`<a href="https://github.com/scottjehl/Respond">https://github.com/scottjehl/Respond</a>`) -->`<br>
+`<!--[if lt IE 9]>`<br>
+`<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>`<br>
+`<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>`<br>
+`<![endif]-->`<br>
+
+It's up to you whether or not you want to include this option.
+
+<b>`<title> ... </title>`</b><br>
+This textbox allows you to type in the <a href="https://www.w3.org/TR/html5/document-metadata.html#the-title-element">title</a> of your document. If you care about SEO you should keep your title under 70 characters (<a href="https://moz.com/learn/seo/title-tag">preferably in the 50-60 character range</a>).
+
+<b>`<meta name="description" content="` ...  `">`</b><br>
+This textbox allows you to type in your <a href="https://en.wikipedia.org/wiki/Meta_element#The_description_attribute">meta description</a>. If you care about SEO your description should ideally be <a href="https://moz.com/learn/seo/meta-description">150-160 characters</a>.
+
+<b>`<meta name="keywords" content="` ...  `">`</b><br>
+As of 2009 Google <a href="https://googlewebmastercentral.blogspot.com/2009/09/google-does-not-use-keywords-meta-tag.html">has stated</a> that they no longer use `<meta name="keywords">` in their search ranking algorithm so this tool does not include them. They are considered antiquated and useless on modern websites.
+
+<b>`<meta name="robots" content="` ...  `">`</b><br>
+The <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">meta robots tag</a> controls how search engines crawl and index your page. It supports the following options...
+
+`noindex`: Do not show this page in search results and do not show a "Cached" link in search results.<br>
+`nofollow`: Do not follow the links on this page<br>
+`noodp`: Do not use metadata from the <a href="http://www.dmoz.org/">Open Directory project</a> for titles or snippets shown for this page<br>
+`noydir`: Prevents the usage of the <a href="https://en.wikipedia.org/wiki/Yahoo!_Directory">Yahoo Directory</a> description as the description in search results (Yahoo only)<br>
+`noarchive`: Do not show a "Cached" link in search results<br>
+`nosnippet`: Do not show a snippet in the search results for this page<br>
+`noimageindex`: Do not index images on this page<br>
+
+You may also consider adding these additional options manually...<br>
+
+`notranslate`: Do not offer translation of this page in search results<br>
+`unavailable_after`: [RFC-850 date/time] Do not show this page in search results after the specified date/time. The date/time must be specified in the RFC 850 format<br>
+
+
+<b>`<meta name="viewport" content="` ...  `">`</b><br>
+The <a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport?hl=en">meta viewport tag</a> controls how the page is displayed on mobile devices. The <a href="http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho">consensus</a> among most modern web developers for the best user experience on mobile is to use the following as your meta viewport...
+
+`<meta name="viewport" content="width=device-width, initial-scale=1">`<br>
+
+<b>`<base href="` ... `" target="_self">`</b><br>
+The <a href="https://www.w3.org/TR/html5/document-metadata.html#the-base-element">`<base>`</a> element specifies the document base URL for the purposes of resolving relative URLs and the name of the default browsing context for the purposes of following hyperlinks. The `target` attribute may be set to:
+
+<b>`_self`</b> or (blank): current window<br>
+<b>`_blank`</b>: new window<br>
+<b>`_parent`</b>: parent window<br>
+<b>`_top`</b>: topmost window<br>
+<b>`custom window name`</b>: specificed window<br>
+
+<b>`<link rel="canonical" href="` ... `">`</b><br>
+The <a href="https://support.google.com/webmasters/answer/139066?hl=en#2">rel="canonical" link element</a> is a strong hint to search engines about which preferred version of the page to index among duplicate versions on the web.
+
+<b>`<link rel="icon" href="` ... `" sizes="16x16" type="image/x-icon">`</b><br>
+The <a href="https://www.w3.org/TR/html5/links.html#rel-icon">rel="icon" link element</a> specifies a <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a> representing the page or site and should be used by the user agent when representing the page in the user interface.
+
+For historical reasons the icon keyword may be preceded by the keyword "shortcut". If the "shortcut" keyword is present, it must be come immediately before the icon keyword and the two keywords must be separated by only a single space.
+
+<b>`<link rel="alternate" type="application/rss+xml" href="` ... `">`</b><br>
+This box allows you to specify the URL of your site's <a href="https://en.wikipedia.org/wiki/RSS">RSS</a> or <a href="https://en.wikipedia.org/wiki/Atom_(standard)">Atom feed</a>. The first <a href="https://www.w3.org/TR/html5/links.html#rel-alternate">link element</a> in the document with the `alternate` keyword used with the `type` attribute set to the value `application/rss+xml` or `application/atom+xml` is treated as the default syndication feed for the purposes of feed autodiscovery.
+
+<b>`<link rel="stylesheet" type="text/css" href="` ... `">`</b><br>
+
+
+
+
+
 # The story behind HTMLGen
-I've always been frustrated by the lack of good visual HTML designers/code generators. Even now in the year 2016 doing a Google search for something like "<a href="https://www.google.com/search?q=html+generator">html generator</a>" or "<a href="https://www.google.com/search?q=visual+html+designer">visual html designer</a>" provides little to no relevant results. You get results like table generators or  button generators or link generators or meta tag generators or WYSIWYG textboxes or sites like <a href="http://codepen.io/">codepen.io</a> that would still have you <em>hand-write</em> all your HTML, CSS, and Javascript. That doesn't save me time! The act of hand-coding is what takes so damn long. Give me a tool that actually saves me time and <b>WRITES MY CODE FOR ME</b> while simultaneously supporting all the latest web technologies! I want <em>fast</em>. I want <em>easy</em>. I want <em>simple</em>.
+I've always been frustrated by the lack of good visual HTML designers/code generators. Even now in the year 2016 doing a Google search for something like "<a href="https://www.google.com/search?q=html+generator">html generator</a>" or "<a href="https://www.google.com/search?q=visual+html+designer">visual html designer</a>" provides little to no relevant results. You get results like table generators or button generators or link generators or meta tag generators or WYSIWYG textboxes or sites like <a href="http://codepen.io/">codepen.io</a> that would still have you <em>hand-write</em> all your HTML, CSS, and Javascript. That doesn't save me time! The act of hand-coding is what takes so damn long. Give me a tool that actually saves me time and <b>WRITES MY CODE FOR ME</b> while simultaneously supporting all the latest web technologies! I want <em>fast</em>. I want <em>easy</em>. I want <em>simple</em>.
 
 In the same way <a href="https://en.wikipedia.org/wiki/Visual_Basic">Visual Basic</a> revolutionized computer programming for the masses and <a href="http://www.videoscribe.co/">Video Scribe</a> revolutionized presentation making for the masses there needs to be a similar tool made that can <em>revolutionize web design for the masses</em>. A product that allows you to go from idea to reality in minutes. That's what this tool attempts to do.
 
 You might say "Just use Wordpress dummy!" Yes. I know about Wordpress. <a href="https://wordpress.com/">Wordpress</a> is great and allows you to get your content onto the internet fast and is a great <em>publishing</em> platform but is a not so great <em>design</em> platform. Photoshop is great at design but sucks at publishing. What I'm looking for is a tool that allows me to visually create my site and lay things out on the page just the way I want then just spits out HTML and CSS. That's it!
 
-I'm no Vincent van Gogh here. I can't be expected to turn a blank canvas into a beautiful work of art in like 10 seconds. Most people are not skilled artists. Even if you have Photoshop doesn't mean you're skilled at using it. When it comes to web design modern web design tools should have thousands and thousands of pre-made templates to choose from so that normal people can design websites without having to draw it from scratch themselves every time.
+I don't know about you but I'm no Vincent van Gogh here. I can't be expected to turn a blank canvas into a beautiful work of art in like 10 seconds. Most people are not skilled artists. Even if you have Photoshop doesn't mean you're skilled at using it. When it comes to web design modern web design tools should have thousands and thousands of pre-made templates to choose from so that normal people can design websites without having to draw it from scratch themselves every time.
 
 <a href="http://www.artisteer.com/">Artisteer</a> is a step in the right direction but I don't like the $50 price tag. I think there should be a free and open-source alternative similar to what <a href="https://www.gimp.org/">GIMP</a> is to <a href="http://www.adobe.com/products/photoshop.html">Photoshop</a>. Plus I need much finer control over the HTML and CSS. <a href="http://macaw.co/">Macaw</a> has potential but I don't like the fact that you can't see your code and the design side-by-side at the same time and it runs <b>slow as molasses</b> on old computers. For pete's sake we're just making plain text .HTML and .CSS files here we shouldn't need a super computer!
 
@@ -37,4 +153,4 @@ This tool is by no means complete. The amount of features that could be added to
 
 At this point in the game I am most looking for financial assistance. You must understand creating a tool like this takes an incredible amount of time and I'm still a human being. Still gotta eat. Still gotta sleep. Still gotta pay for a roof over my head. Sending donations by either <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=%65%6C%65%61%64%6F%6E%34%40%67%6D%61%69%6C%2E%63%6F%6D&no_note=0&currency_code=USD">PayPal</a> or <a href="https://www.coinbase.com/eleadon">Bitcoin</a> would be greatly appreicated. Considering the amount of time I'm pouring into this project and the countless hours it could save you and your future web development needs it probably wouldn't kill you to toss me like 5 bucks. If enough people donated I could afford to work on this project full time.
 
-One final note. Yes I am aware there are high-quality, high-grade professional web-design tools out there like <a href="http://www.adobe.com/products/muse.html">Adobe Muse</a> and <a href="http://www.adobe.com/products/dreamweaver.html">Adobe Dreamweaver</a> but both of which cost money and I'm trying to make a free alternative here that is open-source and community driven. You may consider this project analogous to <a href="http://brackets.io/">Brackets</a> in that it's free and it's only job in life is to produce HTML. The only difference is this tool attempts to visually design the page in the browser and it tries to write out as much of your HTML code for you as it possibly can.
+One final note. Yes I am aware there are high-quality, high-grade professional web-design tools out there like <a href="http://www.adobe.com/products/muse.html">Adobe Muse</a> and <a href="http://www.adobe.com/products/dreamweaver.html">Adobe Dreamweaver</a> but both of which cost money and I'm trying to make a free alternative here that is open-source and community driven. You may consider this project analogous to <a href="http://brackets.io/">Brackets</a> in that it's free and it's only job in life is to produce HTML. The only difference is this tool attempts to visually design the page in the browser and it tries to write out as much of your HTML code for you as it possibly can whereas Brackets is just a text editor.
