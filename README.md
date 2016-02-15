@@ -1,5 +1,5 @@
 # What is it?
-This tool is similar in nature to <a href="https://html5boilerplate.com/">html5boilerplate.com</a>, <a href="http://www.initializr.com/">initializr.com</a>, <a href="http://htmlshell.com/">htmlshell.com</a> or <a href="http://sanusart.github.io/html-now/">sanusart.github.io/html-now/</a>. It is a free configurable boilerplate you can use to quickly generate the starting code necassary for any <a href="https://www.w3.org/TR/html5/">HTML5</a> project.
+This tool is similar in nature to <a href="https://html5boilerplate.com/">html5boilerplate.com</a>, <a href="http://www.initializr.com/">initializr.com</a>, <a href="http://htmlshell.com/">htmlshell.com</a> or <a href="http://sanusart.github.io/html-now/">sanusart.github.io/html-now/</a>. It is a free configurable boilerplate you can use to quickly generate the starting code necassary for any <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> project.
 
 Over time I plan to add more features and make it a more fleshed out and complete visual HTML design tool but for right now it just focuses on the `<HEAD>` element and generates code for all of the possible things you might want to include there.
 
