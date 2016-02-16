@@ -1077,6 +1077,9 @@ if (document.getElementById('chkOpenGraph').checked == true) {
  if (document.getElementById('txtMetaRobots').value != "") {
   h = h + "<meta name=\"robots\" content=\"" + document.getElementById('txtMetaRobots').value.replace(/\u0022/g, "&quot;") + "\">" + "\n";
  }
+ if (document.getElementById('chkNoTranslate').checked == true) {
+  h = h + "<meta name=\"google\" content=\"notranslate\">" + "\n";
+ }
  if (document.getElementById('txtLinkRelAuthor').value != "") {
   h = h + "<link rel=\"author\" href=\"" + document.getElementById('txtLinkRelAuthor').value.replace(/\u0022/g, "&quot;") + "\">" + "\n";
  }
