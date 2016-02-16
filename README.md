@@ -106,7 +106,7 @@ This box allows you to specify an external <a href="https://en.wikipedia.org/wik
 
 Specifying `type="text/css"` is <a href="https://www.w3.org/TR/html51/semantics.html#the-style-element">technically unnecassary</a> in HTML5 as it is the default but it is a personal preference of mine. You are always free to delete it later if you don't want it.
 
-<b>Normalize</b><br>
+<b>`Normalize`</b><br>
 Checking this checkbox will include the very popular <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> which is a collection of CSS properties that is intended to make browsers render all elements more consistently and in line with modern standards. For the purposes of quick testing and debugging it is placed in a `<STYLE>` element but for production purposes it is recommended to move it to an external stylesheet and use the `<link rel="stylesheet" href="...">` syntax.
 
 <b>`<script type="text/javascript" src="` ... `" async></script>`</b><br>
