@@ -132,9 +132,143 @@ will automatically reload the page from the server every 5 minutes<br>
 will automatically redirect to page4.html after 20 seconds has passed<br>
 
 <b>`<meta name="application-name" content="` ... `">`</b><br>
+The <a href="https://www.w3.org/TR/html5/document-metadata.html#meta-application-name">meta application name</a> allows you to optionally specify a short free-form string giving the name of the Web application that the page represents. If the page is not a Web application the `application-name` metadata name must not be used. User agents may use the application name in UI in preference to the page's title, since the title might include status messages and the like relevant to the status of the page at a particular moment in time instead of just being the name of the application.
 
+<b>`<meta name="author" content="` ... `">`</b><br>
+The <a href="https://www.w3.org/TR/html5/document-metadata.html#meta-author">meta author name</a> allows you to optionally specify a free-form string giving the name of one of the page's authors.
 
+<b>`<link rel="author" href="` ... `">`</b><br>
+The <a href="https://www.w3.org/TR/html5/links.html#link-type-author">rel="author" link</a> allows you to optionally specify a URL of the page author, typically a Google+ profile URL. You can find out more information in <a href="https://www.youtube.com/watch?v=FgFb6Y-UJUI">this YouTube video</a> or <a href="https://yoast.com/push-rel-author-head/">this article on Yoast</a>.
 
+<b>`<meta name="google-site-verification" content="` ... `">`</b><br>
+If you use <a href="https://www.google.com/webmasters/tools/home">Google Webmaster Tools</a> you can use this tag on the top-level page of your site to verify ownership for Search Console. Th `content` attribute must match exactly what is provided to you from Google (including upper and lower case).
+
+<b>`jQuery`</b><br>
+Checking this checkbox will add jQuery to your page. <a href="https://en.wikipedia.org/wiki/JQuery">jQuery</a> is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. jQuery is the most popular JavaScript library in use today, with installation on 65% of the top 10 million highest-trafficked sites on the Web. It will add the following lines of code to your HTML...
+
+`<!-- jQuery v1.12 (for legacy IE) https://jquery.com/ -->`<br>
+`<!--[if lt IE 9]>`<br>
+`<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" defer></script>`<br>
+`<![endif]-->`<br>
+`<!-- jQuery v2.2.0 (for modern browsers) https://jquery.com/ -->`<br>
+`<!--[if gte IE 9]><!-->`<br>
+`<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" defer></script>`<br>
+`<!--<![endif]-->`<br>
+
+<b>`jQuery UI`</b><br>
+Checking this checkbox will add jQuery UI to your page. <a href="https://en.wikipedia.org/wiki/JQuery_UI">jQuery UI</a> is a collection of GUI widgets, animated visual effects and themes implemented with jQuery, CSS and HTML. It will add the following lines of code to your HTML...
+
+`<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">`<br>
+`<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" defer></script>`<br>
+
+<b>`jQuery Mobile`</b><br>
+Checking this checkbox will add jQuery Mobile to your page. <a href="https://en.wikipedia.org/wiki/JQuery_Mobile">jQuery Mobile</a> is a touch-optimized web framework currently being developed by the jQuery project team. It will add the following lines of code to your HTML...
+
+`<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">`<br>
+`<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js" defer></script>`<br>
+
+<b>`AngularJS`</b><br>
+Checking this checkbox will add AngularJS to your page. <a href="https://en.wikipedia.org/wiki/AngularJS">AngularJS</a> is an open-source web application framework maintained by Google to address many of the challenges encountered in developing single-page applications. It aims to simplify both the development and the testing of such applications by providing a framework for client-side model–view–controller (MVC) and model–view–viewmodel (MVVM) architectures, along with components commonly used in rich Internet applications. It will add the following lines of code to your HTML...
+
+`<!-- AngularJS v1.5.0 https://angularjs.org/ -->`<br>
+`<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>`<br>
+
+<b>`Angular Material`</b><br>
+Checking this checkbox will add Angular Material to your page. <a href="https://material.angularjs.org/">Angular Material</a> is the reference implementation of Google's Material Design Specification. It provides a set of reusable, well-tested, and accessible UI components based on Material Design. It will add the following lines of code to your HTML...
+
+`<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>`<br>
+`<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-aria.min.js"></script>`<br>
+`<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-messages.min.js"></script>`<br>
+`<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>`<br>
+`<script>angular.module('BlankApp', ['ngMaterial']);</script>`<br>
+
+<b>`MooTools`</b><br>
+Checking this checkbox will add MooTools to your page. <a href="https://en.wikipedia.org/wiki/MooTools">MooTools</a> (My Object-Oriented Tools) is a lightweight, object-oriented JavaScript framework.  It is used on more than 4% of all websites and is one of the most popular JavaScript libraries. It will add the following lines of code to your HTML...
+
+`<!-- MooTools v1.6.0 http://mootools.net/ -->`<br>
+`<script src="https://ajax.googleapis.com/ajax/libs/mootools/1.6.0/mootools.min.js"></script>`<br>
+
+<b>`Add Twitter Tags`</b><br>
+Checking this checkbox allows you to optionally add a <a href="https://dev.twitter.com/cards/types/summary">Twitter Summary Card</a> to the `<HEAD>` of your page. Twitter Summary Cards give the reader a preview of the content before clicking through to your website. It will add the following lines of code to your HTML...
+
+`<!-- Twitter Metadata https://dev.twitter.com/cards/types/summary -->`<br>
+`<meta name="twitter:card" content="summary">`<br>
+`<meta name="twitter:site" content="@SiteName">`<br>
+`<meta name="twitter:creator" content="@AuthorName">`<br>
+`<meta name="twitter:title" content="Put page title here">`<br>
+`<meta name="twitter:description" content="Put page description here">`<br>
+`<meta name="twitter:image" content="Put URL of preview image here">`<br>
+
+<b>`Add Facebook Tags`</b><br>
+Checking this checkbox allows you to optionally add <a href="https://developers.facebook.com/docs/sharing/webmasters">Facebook Open Graph</a> metadata to the `<HEAD>` of your page. Open Graph data allows you to specify a title, description and preview image to display when your content gets shared on Facebook. It will add the following lines of code to your HTML...
+
+`<!-- Facebook Metadata https://developers.facebook.com/docs/sharing/webmasters -->`<br>
+`<meta property="og:locale" content="en_US">`<br>
+`<meta property="og:type" content="article">` `<!-- can also be set to website -->`<br>
+`<meta property="og:url" content="Put page URL here">`<br>
+`<meta property="og:title" content="Put title here">`<br>
+`<meta property="og:description" content="Put description here">`<br>
+`<meta property="og:site_name" content="Put site name here">`<br>
+`<meta property="og:image" content="Put URL of preview image here">`<br>
+`<meta property="fb:app_id" content="Put Facebook app id here">`<br>
+`<meta property="fb:profile_id" content="Put the Facebook ID of a user that can be followed here">`<br>
+`<meta property="og:updated_time" content="2016-02-16T06:53:13+00:00">`<br>
+`<meta property="article:modified_time" content="2016-02-16T06:53:13+00:00">`<br>
+`<meta property="article:published_time" content="2016-02-16T06:53:13+00:00">`<br>
+`<meta property="article:author" content="Facebook URL of author">`<br>
+`<meta property="article:publisher" content="Facebook URL of publisher">`<br>
+`<meta property="article:section" content="The section of your website to which the article belongs">`<br>
+`<meta property="article:tag" content="keywords relevant to the article">`<br>
+
+<b>`Add Google Fonts`</b><br>
+Checking this checkbox allows you to add one or more <a href="https://www.google.com/fonts">Google Web Fonts</a> to your page. Multiple fonts can be separated with a comma. For example typing "Open Sans, Roboto" will include the following lines of code in your HTML...
+
+`<!-- Google Web Fonts https://www.google.com/fonts -->`<br>
+`<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" type="text/css">`<br>
+
+<b>`Add Adobe Fonts`</b><br>
+Checking this checkbox allows you to add one or more <a href="https://edgewebfonts.adobe.com/">Adobe Edge Web Fonts</a> to your page. Multiple fonts can be separated with a comma. For example typing "Source Sans Pro, Source Code Pro" will include the following lines of code in your HTML...
+
+`<!-- Adobe Edge Web Fonts https://edgewebfonts.adobe.com/ -->`<br>
+`<script src="http://use.edgefonts.net/source-sans-pro;source-code-pro.js"></script>`<br>
+
+<b>`Add FontAwesome Icons`</b><br>
+Checking this checkbox allows you to add <a href="https://fortawesome.github.io/Font-Awesome/">FontAwesome</a> web icons to your page. It will add the following lines of code to your HTML...
+
+`<!-- Font Awesome Web Icons v4.5.0 https://fortawesome.github.io/Font-Awesome/ -->`<br>
+`<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">`<br>
+
+To add an icon to your page you would use HTML like this...
+
+`<i class="fa fa-camera-retro fa-lg"></i>`<br>
+
+<b>`Add Entypo+ Icons`</b><br>
+Checking this checkbox allows you to add <a href="http://www.entypo.com/">Entypo+</a> web icons to your page. It will add the following lines of code to your HTML...
+
+<!-- Entypo+ Web Icons v3.0 http://www.entypo.com/ --><br>
+`<style>`<br>
+`@font-face{font-family:entypo;src:url(...base64 string...) format('woff');font-weight:normal;font-style:normal;}`<br>
+`i{font-family:entypo !important;...}`<br>
+`.icon-ICON_NAME:before {content:"...";}`<br>
+`.icon-ICON_NAME:before {content:"...";}`<br>
+`</style>`<br>
+
+For offline testing and debugging purposes the font WOFF is encoded as base64 and the CSS is written in-line but for a live production site you would probably want to move them external files.
+
+<b>`Add HTML KickStart`</b><br>
+Checking this checkbox allows you to add <a href="http://www.99lime.com/elements/">HTML KickStart</a> to your page. It will add the following lines of code to your HTML (jQuery will also be included)...
+
+`<!-- HTML Kickstart v0.94 http://www.99lime.com/elements/ -->`<br>
+`<script src="https://cdn.jsdelivr.net/99lime/0.94/js/kickstart.js" defer></script>`<br>
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/99lime/0.94/css/kickstart.css" type="text/css">`<br>
+
+<b>`Add Bootstrap`</b><br>
+Checking this checkbox allows you to add <a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)">Bootstrap</a> to your page. It will add the following lines of code to your HTML (jQuery and HTML5 Shiv will also be included)...
+
+`<!-- Bootstrap v3.3.6 http://getbootstrap.com/ -->`<br>
+`<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">`<br>
+`<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" type="text/css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">`<br>
+`<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous" defer></script>`<br>
 
 # The story behind HTMLGen
 I've always been frustrated by the lack of good visual HTML designers/code generators. Even now in the year 2016 doing a Google search for something like "<a href="https://www.google.com/search?q=html+generator">html generator</a>" or "<a href="https://www.google.com/search?q=visual+html+designer">visual html designer</a>" provides little to no relevant results. You get results like table generators or button generators or link generators or meta tag generators or WYSIWYG textboxes or sites like <a href="http://codepen.io/">codepen.io</a> that would still have you <em>hand-write</em> all your HTML, CSS, and Javascript. That doesn't save me time! The act of hand-coding is what takes so damn long. Give me a tool that actually saves me time and <b>WRITES MY CODE FOR ME</b> while simultaneously supporting all the latest web technologies! I want <em>fast</em>. I want <em>easy</em>. I want <em>simple</em>.
