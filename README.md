@@ -67,18 +67,14 @@ As of 2009 Google <a href="https://googlewebmastercentral.blogspot.com/2009/09/g
 <b>`<meta name="robots" content="` ...  `">`</b><br>
 The <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">meta robots tag</a> controls how search engines crawl and index your page. It supports the following options...
 
-`noindex`: Do not show this page in search results and do not show a "Cached" link in search results.<br>
-`nofollow`: Do not follow the links on this page<br>
-`noodp`: Do not use metadata from the <a href="http://www.dmoz.org/">Open Directory project</a> for titles or snippets shown for this page<br>
-`noydir`: Prevents the usage of the <a href="https://en.wikipedia.org/wiki/Yahoo!_Directory">Yahoo Directory</a> description as the description in search results (Yahoo only)<br>
-`noarchive`: Do not show a "Cached" link in search results<br>
-`nosnippet`: Do not show a snippet in the search results for this page<br>
-`noimageindex`: Do not index images on this page<br>
-
-You may also consider adding these additional options manually...<br>
-
-`notranslate`: Do not offer translation of this page in search results<br>
-`unavailable_after`: [RFC-850 date/time] Do not show this page in search results after the specified date/time. The date/time must be specified in the RFC 850 format (example: 25-Aug-2007 15:00:00 EST)<br>
+<b>`noindex`</b>: Do not show this page in search results and do not show a "Cached" link in search results.<br>
+<b>`nofollow`</b>: Do not follow the links on this page<br>
+<b>`noodp`</b>: Do not use metadata from the <a href="http://www.dmoz.org/">Open Directory project</a> for titles or snippets shown for this page<br>
+<b>`notranslate`</b>: Do not offer translation of this page in search results<br>
+<b>`noarchive`</b>: Do not show a "Cached" link in search results<br>
+<b>`nosnippet`</b>: Do not show a snippet in the search results for this page<br>
+<b>`noimageindex`</b>: Do not index images on this page<br>
+<b>`unavailable_after`</b>: [RFC-850 date/time] Do not show this page in search results after the specified date/time. The date/time must be specified in the RFC 850 format (example: 25-Aug-2007 15:00:00 EST)<br>
 
 <b>`<meta name="viewport" content="` ...  `">`</b><br>
 The <a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport?hl=en">meta viewport tag</a> controls how the page is displayed on mobile devices. The <a href="http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho">consensus</a> among most modern web developers for the best user experience on mobile is to use the following as your meta viewport...
