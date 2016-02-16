@@ -213,8 +213,8 @@ a.bbar_tab_sel {
  position: absolute;
  bottom: 20px;
  left: 225px;
- font-family: 'MS Sans Serif', sans-serif;
- font-size: 11px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 14px;
  width: 137px;
  height: 41px;
  margin: 0;
@@ -288,8 +288,8 @@ a.bbar_tab_sel {
  position: absolute;
  top: 363px;
  left: 176px;
- font-family: 'MS Sans Serif', sans-serif;
- font-size: 11px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 14px;
  width: 137px;
  height: 41px;
  margin: 0;
@@ -333,10 +333,10 @@ a.bbar_tab_sel {
 
 #frmCSP_Label1 {
  position: absolute;
- top: 144px;
+ top: 138px;
  left: 22px;
- font-family: 'MS Sans Serif', sans-serif;
- font-size: 11px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 14px;
 }
 
 #directives_div {
@@ -360,10 +360,10 @@ a.bbar_tab_sel {
 
 #frmCSP_Label3 {
  position: absolute;
- top: 144px;
+ top: 138px;
  left: 216px;
- font-family: 'MS Sans Serif', sans-serif;
- font-size: 11px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 14px;
 }
 
 #allowed_values_div {
@@ -389,8 +389,8 @@ a.bbar_tab_sel {
  position: absolute;
  top: 480px;
  left: 146px;
- font-family: 'MS Sans Serif', sans-serif;
- font-size: 11px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 14px;
  width: 137px;
  height: 41px;
  margin: 0;
@@ -426,10 +426,10 @@ a.bbar_tab_sel {
 
 #lblCaption {
  position: absolute;
- top: 56px;
+ top: 51px;
  left: 22px;
- font-family: 'MS Sans Serif', sans-serif;
- font-size: 11px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 14px;
 }
 
 #lstLangs {
@@ -444,8 +444,8 @@ a.bbar_tab_sel {
 }
 
 #frmHtmlLang_btnOK {
- font-family: 'MS Sans Serif', sans-serif;
- font-size: 11px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 14px;
  width: 113px;
  height: 41px;
  margin: 0;
@@ -456,8 +456,8 @@ a.bbar_tab_sel {
 }
 
 #frmHtmlLang_btnCancel {
- font-family: 'MS Sans Serif', sans-serif;
- font-size: 11px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 14px;
  width: 113px;
  height: 41px;
  margin: 0;

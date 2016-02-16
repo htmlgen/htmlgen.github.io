@@ -180,7 +180,8 @@ function window_onload() {
  if (window.addEventListener) {document.getElementById('chkNoIndex').addEventListener('click',build_robots_string);}else{document.getElementById('chkNoIndex').attachEvent('onclick',build_robots_string);}
  if (window.addEventListener) {document.getElementById('chkNoFollow').addEventListener('click',build_robots_string);}else{document.getElementById('chkNoFollow').attachEvent('onclick',build_robots_string);}
  if (window.addEventListener) {document.getElementById('chkNoODP').addEventListener('click',build_robots_string);}else{document.getElementById('chkNoODP').attachEvent('onclick',build_robots_string);}
- if (window.addEventListener) {document.getElementById('chkNoydir').addEventListener('click',build_robots_string);}else{document.getElementById('chkNoydir').attachEvent('onclick',build_robots_string);}
+ //if (window.addEventListener) {document.getElementById('chkNoydir').addEventListener('click',build_robots_string);}else{document.getElementById('chkNoydir').attachEvent('onclick',build_robots_string);}
+ if (window.addEventListener) {document.getElementById('chkNoTranslate').addEventListener('click',build_robots_string);}else{document.getElementById('chkNoTranslate').attachEvent('onclick',build_robots_string);}
  if (window.addEventListener) {document.getElementById('chkNoArchive').addEventListener('click',build_robots_string);}else{document.getElementById('chkNoArchive').attachEvent('onclick',build_robots_string);}
  if (window.addEventListener) {document.getElementById('chkNoSnippet').addEventListener('click',build_robots_string);}else{document.getElementById('chkNoSnippet').attachEvent('onclick',build_robots_string);}
  if (window.addEventListener) {document.getElementById('chkNoImageIndex').addEventListener('click',build_robots_string);}else{document.getElementById('chkNoImageIndex').attachEvent('onclick',build_robots_string);}
@@ -348,7 +349,7 @@ function frmHtmlLang_btnOK_click(e) {
    region_query = region_query.replace(/-/g, "");
    region_query = region_query.replace(/'/g, "");
    document.getElementById('frmHtmlLang_title').textContent = "Region Selection";
-   document.getElementById('lblCaption').textContent = "Exact match not found. Choose the closest match below...";
+   document.getElementById('lblCaption').textContent = "Choose your preferred region...";
    // search for exact match
    for (var i=0;i<html_regions.length;i++) {
      if (html_regions[i][0].toLowerCase() == region_query) { region_code = html_regions[i][1]; break; }
@@ -476,7 +477,7 @@ function lblLookuplang_Click(e) {
   lang_query = lang_query.replace(/-/g, "");
   lang_query = lang_query.replace(/'/g, ""); 
   document.getElementById('frmHtmlLang_title').textContent = "Language Selection";
-  document.getElementById('lblCaption').textContent = "Exact match not found. Choose the closest match below...";
+  document.getElementById('lblCaption').textContent = "Choose your preferred language...";
   if (lang_query == "cantonese") { lang_code = "yue"; frmHtmlLang_btnOK_click(); }
   // search for exact match
   for (var i=0;i<html_langs.length;i++) {
@@ -542,7 +543,8 @@ function build_robots_string(e) {
  s = (document.getElementById('chkNoIndex').checked) ? "noindex" : "index";
  s = s + ((document.getElementById('chkNoFollow').checked) ? ",nofollow" : ",follow");
  s = s + ((document.getElementById('chkNoODP').checked) ? ",noodp" : "");
- s = s + ((document.getElementById('chkNoydir').checked) ? ",noydir" : "");
+ //s = s + ((document.getElementById('chkNoydir').checked) ? ",noydir" : "");
+ s = s + ((document.getElementById('chkNoTranslate').checked) ? ",notranslate" : "");
  s = s + ((document.getElementById('chkNoArchive').checked) ? ",noarchive" : "");
  s = s + ((document.getElementById('chkNoSnippet').checked) ? ",nosnippet" : "");
  s = s + ((document.getElementById('chkNoImageIndex').checked) ? ",noimageindex" : "");
