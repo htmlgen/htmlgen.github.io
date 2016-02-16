@@ -245,7 +245,7 @@ To add an icon to your page you would use HTML like this...
 <b>`Add Entypo+ Icons`</b><br>
 Checking this checkbox allows you to add <a href="http://www.entypo.com/">Entypo+</a> web icons to your page. It will add the following lines of code to your HTML...
 
-<!-- Entypo+ Web Icons v3.0 http://www.entypo.com/ --><br>
+`<!-- Entypo+ Web Icons v3.0 http://www.entypo.com/ -->`<br>
 `<style>`<br>
 `@font-face{font-family:entypo;src:url(...base64 string...) format('woff');font-weight:normal;font-style:normal;}`<br>
 `i{font-family:entypo !important;...}`<br>
@@ -253,7 +253,11 @@ Checking this checkbox allows you to add <a href="http://www.entypo.com/">Entypo
 `.icon-ICON_NAME:before {content:"...";}`<br>
 `</style>`<br>
 
-For offline testing and debugging purposes the font WOFF is encoded as base64 and the CSS is written in-line but for a live production site you would probably want to move them external files.
+To add an icon to your page you would use HTML like this...
+
+`<i class="icon-aircraft"></i>`<br>
+
+For offline testing and debugging purposes the font WOFF is encoded as base64 and the CSS is written in-line but for a live site you would probably want to move them external files.
 
 <b>`Add HTML KickStart`</b><br>
 Checking this checkbox allows you to add <a href="http://www.99lime.com/elements/">HTML KickStart</a> to your page. It will add the following lines of code to your HTML (jQuery will also be included)...
