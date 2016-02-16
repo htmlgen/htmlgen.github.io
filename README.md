@@ -259,14 +259,14 @@ To add an icon to your page you would use HTML like this...
 For offline testing and debugging purposes the font WOFF is encoded as base64 and the CSS is written in-line but for a live site you would probably want to move them external files.
 
 <b>`Add HTML KickStart`</b><br>
-Checking this checkbox allows you to add <a href="http://www.99lime.com/elements/">HTML KickStart</a> to your page. It will add the following lines of code to your HTML (jQuery will also be included)...
+Checking this checkbox allows you to add <a href="http://www.99lime.com/elements/">HTML KickStart</a> to your page. It will add the following lines of code to your HTML (<a href="https://jquery.com/">jQuery</a> will also be included)...
 
 `<!-- HTML Kickstart v0.94 http://www.99lime.com/elements/ -->`<br>
 `<script src="https://cdn.jsdelivr.net/99lime/0.94/js/kickstart.js" defer></script>`<br>
 `<link rel="stylesheet" href="https://cdn.jsdelivr.net/99lime/0.94/css/kickstart.css" type="text/css">`<br>
 
 <b>`Add Bootstrap`</b><br>
-Checking this checkbox allows you to add <a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)">Bootstrap</a> to your page. It will add the following lines of code to your HTML (jQuery and HTML5 Shiv will also be included)...
+Checking this checkbox allows you to add <a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)">Bootstrap</a> to your page. It will add the following lines of code to your HTML (<a href="https://jquery.com/">jQuery</a> and <a href="https://github.com/afarkas/html5shiv">HTML5 Shiv</a> will also be included)...
 
 `<!-- Bootstrap v3.3.6 http://getbootstrap.com/ -->`<br>
 `<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">`<br>
