@@ -247,9 +247,8 @@ Checking this checkbox allows you to add <a href="http://www.entypo.com/">Entypo
 
 `<!-- Entypo+ Web Icons v3.0 http://www.entypo.com/ -->`<br>
 `<style>`<br>
-`@font-face{font-family:entypo;src:url(...base64 string...) format('woff');font-weight:normal;font-style:normal;}`<br>
+`@font-face{font-family:entypo;src:url(base64 string) format('woff');font-weight:normal;font-style:normal;}`<br>
 `i{font-family:entypo !important;...}`<br>
-`.icon-ICON_NAME:before {content:"...";}`<br>
 `.icon-ICON_NAME:before {content:"...";}`<br>
 `</style>`<br>
 
