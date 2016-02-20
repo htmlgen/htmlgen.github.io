@@ -3,6 +3,11 @@ This tool is similar in nature to <a href="https://html5boilerplate.com/">html5b
 
 Over time I plan to add more features and make it a more fleshed out and complete visual HTML designer but for right now it just focuses on the `<HEAD>` element and generates code for all of the possible things you might want to include there.
 
+<h3 align="center">Video Overview</h3>
+<p align="center">
+<a href="https://www.youtube.com/watch?v=xvbjsCh7ObQ" target="_blank"><img src="http://img.youtube.com/vi/xvbjsCh7ObQ/0.jpg" alt="HTMLGen Video Tutorial"></a>
+</p>
+
 # How do I use it?
 Visit <a href="http://htmlgen.github.io/" target="_blank">htmlgen.github.io</a>. On the left side of the screen you should see a menu with these options...
 
