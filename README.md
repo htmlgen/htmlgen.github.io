@@ -5,7 +5,7 @@ Over time I plan to add more features and make it a more fleshed out and complet
 
 <h3 align="center">Video Overview</h3>
 <p align="center">
-<a href="https://www.youtube.com/watch?v=xvbjsCh7ObQ" target="_blank"><img src="http://img.youtube.com/vi/xvbjsCh7ObQ/0.jpg" alt="HTMLGen Video Tutorial"></a>
+<a href="https://www.youtube.com/watch?v=3XLIFoHowho" target="_blank"><img src="http://img.youtube.com/vi/xvbjsCh7ObQ/0.jpg" alt="HTMLGen Video Tutorial"></a>
 </p>
 
 # How do I use it?
